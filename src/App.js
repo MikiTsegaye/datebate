@@ -13,9 +13,18 @@ function App() {
 
   // Initialize EmailJS
   useEffect(() => {
-    if (window.emailjs) {
-      window.emailjs.init('kcAk0wxoLwTEjz764');
-    }
+    // Wait for EmailJS to load and then initialize
+    const initEmailJS = () => {
+      if (window.emailjs) {
+        window.emailjs.init('kcAk0wxoLwTEjz764');
+        console.log('EmailJS initialized');
+      } else {
+        // Retry in 500ms if not loaded yet
+        setTimeout(initEmailJS, 500);
+      }
+    };
+    
+    initEmailJS();
   }, []);
 
   const handleReset = () => {
