@@ -40,6 +40,7 @@ Looking forward to creating amazing memories together! ✨
 
     try {
       const emailData = {
+        email: 'milki2014@gmail.com',
         date_chosen: formatDate(selectedDate),
         main_activity: selectedActivity,
         specific_choice: specificChoice
@@ -47,7 +48,7 @@ Looking forward to creating amazing memories together! ✨
 
       const response = await emailjs.send(
         'service_jd01ur6', // Your EmailJS Service ID
-        'template_f0zliev', // Your EmailJS Template ID
+        'template_twchcky', // Your EmailJS Template ID
         emailData
       );
 
