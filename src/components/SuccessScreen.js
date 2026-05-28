@@ -10,7 +10,7 @@ function SuccessScreen({ onReset }) {
             Can't wait! See you then 💝
           </h1>
           <p className="text-lg text-gray-700">
-            Your invitation details have been sent! Check your inbox for confirmation.
+            Your invitation details have been sent!
           </p>
         </div>
 
