@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Step1 from './components/Step1';
 import Step2 from './components/Step2';
 import Step3 from './components/Step3';
@@ -13,18 +14,8 @@ function App() {
 
   // Initialize EmailJS
   useEffect(() => {
-    // Wait for EmailJS to load and then initialize
-    const initEmailJS = () => {
-      if (window.emailjs) {
-        window.emailjs.init('kcAk0wxoLwTEjz764');
-        console.log('EmailJS initialized');
-      } else {
-        // Retry in 500ms if not loaded yet
-        setTimeout(initEmailJS, 500);
-      }
-    };
-    
-    initEmailJS();
+    emailjs.init('kcAk0wxoLwTEjz764');
+    console.log('EmailJS initialized');
   }, []);
 
   const handleReset = () => {

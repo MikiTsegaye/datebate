@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Step3({
   selectedDate,
@@ -38,10 +39,6 @@ Looking forward to creating amazing memories together! ✨
     onSendingChange(true);
 
     try {
-      if (!window.emailjs) {
-        throw new Error('EmailJS not loaded');
-      }
-
       const emailData = {
         to_email: 'milki2014@gmail.com', // Update with recipient email
         to_name: 'Miki', // Update with recipient name
@@ -51,7 +48,7 @@ Looking forward to creating amazing memories together! ✨
         formatted_message: formatInvitationMessage()
       };
 
-      const response = await window.emailjs.send(
+      const response = await emailjs.send(
         'service_jd01ur6', // Your EmailJS Service ID
         'template_3akb8g8', // Your EmailJS Template ID
         emailData
