@@ -40,12 +40,9 @@ Looking forward to creating amazing memories together! ✨
 
     try {
       const emailData = {
-        to_email: 'milki2014@gmail.com', // Update with recipient email
-        to_name: 'Miki', // Update with recipient name
         date_chosen: formatDate(selectedDate),
         main_activity: selectedActivity,
-        specific_choice: specificChoice,
-        formatted_message: formatInvitationMessage()
+        specific_choice: specificChoice
       };
 
       const response = await emailjs.send(
