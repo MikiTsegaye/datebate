@@ -1,11 +1,8 @@
 services:
-  - type: web
+  - type: static
     name: clickdate
-    env: node
-    build:
-      command: npm run build
-    start:
-      command: node server.js
+    buildCommand: npm install && npm run build
+    staticSiteBuildDir: build
     envVars:
       - key: REACT_APP_EMAILJS_PUBLIC_KEY
         value: kcAk0wxoLwTEjz764
