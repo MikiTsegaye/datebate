@@ -2,7 +2,7 @@ services:
   - type: web
     name: clickdate
     env: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm run build
     startCommand: node server.js
     envVars:
       - key: REACT_APP_EMAILJS_PUBLIC_KEY
