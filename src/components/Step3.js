@@ -58,8 +58,11 @@ Looking forward to creating amazing memories together! ✨
       onSendingChange(false);
       onNext();
     } catch (err) {
-      console.error('Error sending email:', err);
-      setError('Failed to send invitation. Please try again or check your EmailJS configuration.');
+      console.error('Error sending email - Full error:', err);
+      console.error('Error message:', err?.message);
+      console.error('Error status:', err?.status);
+      console.error('Error text:', err?.text);
+      setError(`Failed to send: ${err?.message || err?.status || err}`);
       onSendingChange(false);
     }
   };
