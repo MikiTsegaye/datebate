@@ -47,7 +47,7 @@ Looking forward to creating amazing memories together! ✨
 
       const response = await emailjs.send(
         'service_jd01ur6', // Your EmailJS Service ID
-        'template_3akb8g8', // Your EmailJS Template ID
+        'template_f0zliev', // Your EmailJS Template ID
         emailData
       );
 
